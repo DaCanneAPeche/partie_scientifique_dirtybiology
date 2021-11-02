@@ -59,24 +59,27 @@ section h1 {
   align-items: center;
 }
 
-.join .card {
-  width: 50vw;
-  height: 20vh;
+.join .card, .promotion .card, .promotion .video-card {
   background-color: #3b4252;
   border: #2e3440 1vw solid;
-  margin: 3vh 0;
   text-decoration: none;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   box-shadow: 0 0 5px black;
   transition: box-shadow 0.2s;
 }
 
-.join .card:hover {
+.join .card:hover, .promotion .card:hover, .promotion .video-card:hover {
   box-shadow: 0 0 15px black;
+}
+
+.join .card {
+  width: 50vw;
+  height: 20vh;
+  margin: 3vh 0;
+  justify-content: space-between;
 }
 
 
@@ -113,4 +116,31 @@ section h1 {
 .join .card:nth-child(3) span:nth-child(1) {
   background: url("../img/reddit.png") no-repeat;
   background-size: contain;
+}
+
+/* promotion section */
+
+.promotion .cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.promotion .card img, .promotion .video-card iframe {
+  width: 30vw;
+}
+
+.promotion .card, .promotion .video-card {
+  width: 32vw;
+  justify-content: center;
+  margin: 3vh;
+}
+
+.promotion .card {
+  height: 44vw;
+}
+
+.promotion .video-card iframe {
+  height: 21vw;
+  border: none;
 }
